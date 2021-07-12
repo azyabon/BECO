@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- SVG -->
+    <svg display="none">
+        <symbol id="menu" viewBox="0 0 512 512">
+            <g>
+                <g>
+                    <path d="M176.792,0H59.208C26.561,0,0,26.561,0,59.208v117.584C0,209.439,26.561,236,59.208,236h117.584
+                        C209.439,236,236,209.439,236,176.792V59.208C236,26.561,209.439,0,176.792,0z M196,176.792c0,10.591-8.617,19.208-19.208,19.208
+                        H59.208C48.617,196,40,187.383,40,176.792V59.208C40,48.617,48.617,40,59.208,40h117.584C187.383,40,196,48.617,196,59.208
+                        V176.792z"/>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path d="M452,0H336c-33.084,0-60,26.916-60,60v116c0,33.084,26.916,60,60,60h116c33.084,0,60-26.916,60-60V60
+                        C512,26.916,485.084,0,452,0z M472,176c0,11.028-8.972,20-20,20H336c-11.028,0-20-8.972-20-20V60c0-11.028,8.972-20,20-20h116
+                        c11.028,0,20,8.972,20,20V176z"/>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path d="M176.792,276H59.208C26.561,276,0,302.561,0,335.208v117.584C0,485.439,26.561,512,59.208,512h117.584
+                        C209.439,512,236,485.439,236,452.792V335.208C236,302.561,209.439,276,176.792,276z M196,452.792
+                        c0,10.591-8.617,19.208-19.208,19.208H59.208C48.617,472,40,463.383,40,452.792V335.208C40,324.617,48.617,316,59.208,316h117.584
+                        c10.591,0,19.208,8.617,19.208,19.208V452.792z"/>
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path d="M452,276H336c-33.084,0-60,26.916-60,60v116c0,33.084,26.916,60,60,60h116c33.084,0,60-26.916,60-60V336
+                        C512,302.916,485.084,276,452,276z M472,452c0,11.028-8.972,20-20,20H336c-11.028,0-20-8.972-20-20V336c0-11.028,8.972-20,20-20
+                        h116c11.028,0,20,8.972,20,20V452z"/>
+                </g>
+            </g>
+        </symbol>
+    </svg>
+    <svg display="none">
+        <symbol id="health" viewBox="0 0 485.5 485.5">
+            <g>
+                <path d="M450.5,207.75c-13.934,0-25.988,8.186-31.616,20H333.26l-59.937,159.385l-140.647-374L51.971,227.75H0v30h72.74
+	l59.937-159.385l140.647,374l80.705-214.615h64.855c5.628,11.814,17.682,20,31.616,20c19.299,0,35-15.701,35-35
+	S469.799,207.75,450.5,207.75z"/>
+            </g>
+        </symbol>
+    </svg>
+    <svg display="none">
+        <symbol id="beauty" viewBox="0 -28 512.001 512">
+            <g>
+                <path d="m256 455.515625c-7.289062 0-14.316406-2.640625-19.792969-7.4375-20.683593-18.085937-40.625-35.082031-58.21875-50.074219l-.089843-.078125c-51.582032-43.957031-96.125-81.917969-127.117188-119.3125-34.644531-41.804687-50.78125-81.441406-50.78125-124.742187 0-42.070313 14.425781-80.882813 40.617188-109.292969 26.503906-28.746094 62.871093-44.578125 102.414062-44.578125 29.554688 0 56.621094 9.34375 80.445312 27.769531 12.023438 9.300781 22.921876 20.683594 32.523438 33.960938 9.605469-13.277344 20.5-24.660157 32.527344-33.960938 23.824218-18.425781 50.890625-27.769531 80.445312-27.769531 39.539063 0 75.910156 15.832031 102.414063 44.578125 26.191406 28.410156 40.613281 67.222656 40.613281 109.292969 0 43.300781-16.132812 82.9375-50.777344 124.738281-30.992187 37.398437-75.53125 75.355469-127.105468 119.308594-17.625 15.015625-37.597657 32.039062-58.328126 50.167969-5.472656 4.789062-12.503906 7.429687-19.789062 7.429687zm-112.96875-425.523437c-31.066406 0-59.605469 12.398437-80.367188 34.914062-21.070312 22.855469-32.675781 54.449219-32.675781 88.964844 0 36.417968 13.535157 68.988281 43.882813 105.605468 29.332031 35.394532 72.960937 72.574219 123.476562 115.625l.09375.078126c17.660156 15.050781 37.679688 32.113281 58.515625 50.332031 20.960938-18.253907 41.011719-35.34375 58.707031-50.417969 50.511719-43.050781 94.136719-80.222656 123.46875-115.617188 30.34375-36.617187 43.878907-69.1875 43.878907-105.605468 0-34.515625-11.605469-66.109375-32.675781-88.964844-20.757813-22.515625-49.300782-34.914062-80.363282-34.914062-22.757812 0-43.652344 7.234374-62.101562 21.5-16.441406 12.71875-27.894532 28.796874-34.609375 40.046874-3.453125 5.785157-9.53125 9.238282-16.261719 9.238282s-12.808594-3.453125-16.261719-9.238282c-6.710937-11.25-18.164062-27.328124-34.609375-40.046874-18.449218-14.265626-39.34375-21.5-62.097656-21.5zm0 0"/>
+            </g>
+        </symbol>
+    </svg>
+    <svg display="none">
+        <symbol id="gaiety" viewBox="0 0 24 24">
+            <g>
+                <path d="m.184 10.462c-.779 4.906 1.401 10.823 8.123 13.006.12.022.231.032.335.032.782 0 1.32-.582 1.32-1.3-.097-.523.383-2.642-.92-2.357-2.519.536-2.821-.871-3.205-1.607 1.086 1.394 2.718 1.359 3.949.819.683-.3.326-1.064.65-1.343.496-.426.244-1.243-.407-1.314-2.314-.255-4.457-1.001-4.457-4.702 0-2.168 1.505-2.362 1.09-3.269-.015-.033-.333-.754-.045-1.849 1.419.262 2.072 1.28 2.753 1.097 1.687-.46 3.544-.46 5.23 0 .704.189 1.207-.801 2.738-1.103.441 1.654-.473 2.058.103 2.677.632.68.953 1.503.953 2.447 0 5.564-4.717 3.957-5.101 5.22-.088.288.005.599.235.792.61.513.53 1.83.465 2.889-.067 1.098-.125 2.045.482 2.579.214.19.595.393 1.284.253 6.634-2.131 8.83-8.022 8.063-12.917-2.096-13.368-21.526-13.352-23.638-.05zm8.27 10.978.004.505c-.523-.181-1.015-.39-1.475-.623.425.109.913.156 1.471.118zm.37-3.7c-.005.026-.01.053-.015.08-.853.252-1.509.001-1.957-.752 0-.001 0-.001-.001-.002.68.364 1.381.56 1.973.674zm3.176-15.74c11.833 0 14.502 16.267 3.469 19.941-.038-.297-.003-.857.021-1.252.058-.951.126-2.059-.213-2.985 5.088-1.059 5.513-6.646 3.554-9.135.243-.952.145-3.189-.729-3.463-.206-.065-1.305-.304-3.437 1.037-1.741-.416-3.62-.417-5.361 0-1.064-.667-3.462-1.752-3.922-.6-.534 1.342-.407 2.427-.248 3.03-1.739 2.204-1.218 5.894.534 7.626-.993-.475-2.361-.637-2.656.314-.323 1.037.912.911 1.679 2.804.073.236.208.513.415.788-6.811-5.565-3.525-18.105 6.894-18.105z"/>
+            </g>
+        </symbol>
+    </svg>
+    <svg display="none">
+        <symbol id="car" viewBox="0 0 447.907 447.907">
+            <g>
+                <path d="M432.703,206.904l-30.5-13.2l-25.9-50.4c-7-13.8-21.2-22.4-36.7-22.3h-44.6v-12.6c0-22.8-18.2-41.4-41-41.4h-213.2
+                    c-22.8,0-40.8,18.7-40.8,41.4v193c-0.2,13.9,10.9,25.3,24.8,25.5c0.1,0,0.2,0,0.4,0h5.3c0,1-0.1,1.4-0.1,2
+                    c-0.1,28.6,23,51.9,51.6,52c28.6,0.1,51.9-23,52-51.6c0-0.2,0-0.3,0-0.5c0-0.7,0-1-0.1-2h172.3c0,1,0,1.4,0,2
+                    c-0.1,28.6,23,51.9,51.6,52c28.6,0.1,51.9-23,52-51.6c0-0.2,0-0.3,0-0.5c0-0.7,0-1,0-2h12.9c13.9,0,25.2-11.3,25.2-25.2
+                    c0-0.1,0-0.2,0-0.4v-71C448.103,220.304,442.103,211.004,432.703,206.904z M82.303,361.004c-17.6,0-31.8-14.2-31.8-31.8
+                    c0-17.6,14.2-31.8,31.8-31.8s31.8,14.2,31.8,31.8C114.103,346.704,99.803,361.004,82.303,361.004z M275.003,307.104h-145.8
+                    c-8.4-18.3-26.8-30-46.9-29.9c-20.2-0.1-38.5,11.5-46.9,29.9h-10.2c-3.1,0-5.2-2.4-5.2-5.5v-51.5h255V307.104z M275.003,108.504
+                    v121.6h-255v-121.6c0-11.7,9.1-21.4,20.8-21.4h213.2c11.7,0.1,21.1,9.7,21,21.3V108.504z M295.003,141.104h44.6
+                    c7.9-0.1,15.3,4.2,19,11.3l20,38.7h-83.6V141.104z M358.103,361.004c-17.6,0-31.8-14.2-31.8-31.8c0-17.6,14.2-31.8,31.8-31.8
+                    s31.8,14.2,31.8,31.8C389.903,346.704,375.703,361.004,358.103,361.004z M428.003,301.604c0,3.1-2.1,5.5-5.2,5.5h-17.8
+                    c-12.1-25.9-42.9-37.1-68.8-25c-11,5.1-19.9,14-25,25h-16.2v-96h98l31.8,14c2,1,3.3,3.2,3.2,5.4V301.604z"/>
+            </g>
+        </symbol>
+    </svg>
+    <svg display="none">
+        <symbol id="loup" viewBox="0 0 512 512">
+            <g>
+                <path d="M317,0C209.477,0,122,87.477,122,195c0,42.96,13.975,82.712,37.603,114.971L0,469.573L42.426,512l159.603-159.603
+			C234.288,376.025,274.04,390,317,390c107.523,0,195-87.477,195-195S424.523,0,317,0z M317,360c-90.981,0-165-74.019-165-165
+			S226.019,30,317,30s165,74.019,165,165S407.981,360,317,360z"/>
+            </g>
+        </symbol>
+    </svg>
+    <!-- SVG -->
+
+    <div class="wrapper">
+        <header class="header">
+            <h1 id="title">Развлечения</h1>
+            <div class="header-input">
+                <input class="input" type="text" placeholder="Какой магазин вам нужен?">
+                <svg class="icon-input"><use xlink:href="#loup"></use></svg>
+            </div>
+        </header>
+        <aside id="sidebar">
+            <div class="toggle-btn" onclick="openMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo"><img src="./img/logo.png" alt="logo" id="logo-img"></div>
+            <ul class="nav-menu">
+                <li onclick="changeTitle('Каталог', event)"><svg class="icon"><use xlink:href="#menu"></use></svg>Каталог</li>
+                <li onclick="changeTitle('Здоровье', event)"><svg class="icon"><use xlink:href="#health"></use></svg>Здоровье</li>
+                <li onclick="changeTitle('Красота', event)"><svg class="icon"><use xlink:href="#beauty"></use></svg>Красота</li>
+                <li class="active" onclick="changeTitle('Развлечения', event)"><svg class="icon"><use xlink:href="#gaiety"></use></svg>Развлечения</li>
+                <li onclick="changeTitle('Авто', event)"><svg class="icon"><use xlink:href="#car"></use></svg>Авто</li>
+            </ul>
+        </aside>
+        <main class="main">
+            <div class="container">
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">ПРОБКА НА МИРА</span>
+                                <p class="card-description">Вечер для двоих</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">50%</span>
+                                <p class="card-description">С К И Д К А</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 8.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">КИНО И НЕМЦЫ</span>
+                                <p class="card-description">Бесплатный бокал пива</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">ВАРВАР</span>
+                                <p class="card-description">П Р О М О К О Д</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 2.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">Valery Cakes</span>
+                                <p class="card-description">Торт</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">30%</span>
+                                <p class="card-description">С К И Д К А</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 6.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">Sushi Sell</span>
+                                <p class="card-description">Набор "Праздник"</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">45%</span>
+                                <p class="card-description">С К И Д К А</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 9.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">Mangosteen</span>
+                                <p class="card-description">Фрукт в подарок</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">J130</span>
+                                <p class="card-description">К У П О Н</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 3.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">ТЕЛЕНОК ТАБАКА</span>
+                                <p class="card-description">Стейк "Мачете"</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">20%</span>
+                                <p class="card-description">С К И Д К А</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 7.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">FIRE FOOD</span>
+                                <p class="card-description">Вторая шаурма в подарок</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">ОГОНЬ</span>
+                                <p class="card-description">П Р О М О К О Д</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 1.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">AROMA CREMERIA</span>
+                                <p class="card-description">Джелато "Пармезан"</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">20%</span>
+                                <p class="card-description">С К И Д К А</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 5.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">ПРОБКА НА МИРА</span>
+                                <p class="card-description">Вечер для двоих</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">J130</span>
+                                <p class="card-description">К У П О Н</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 8.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">КИНО И НЕМЦЫ</span>
+                                <p class="card-description">Бесплатный бокал пива</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">ВАРВАР</span>
+                                <p class="card-description">П Р О М О К О Д</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 2.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">Valery Cakes</span>
+                                <p class="card-description">Торт</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">30%</span>
+                                <p class="card-description">С К И Д К А</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 6.png" alt="card-menu" class="card-img">
+                    </div>
+                    <div class="card">
+                        <div class="card-info">
+                            <div>
+                                <span class="card-title">Sushi Sell</span>
+                                <p class="card-description">Набор "Праздник"</p>
+                            </div>
+                            <div>
+                                <span class="card-sale">45%</span>
+                                <p class="card-description">С К И Д К А</p>
+                            </div>
+                        </div>
+                        <img src="./img/image 9.png" alt="card-menu" class="card-img">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../src/js/script.js"></script>
+</body>
+</html>

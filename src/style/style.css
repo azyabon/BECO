@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns:240px 1fr;
+    grid-template-rows:200px 1fr;
+    grid-template-areas:
+    'sidebar header'
+    'sidebar content';
+}
+#sidebar { 
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #F3F4F9;
+    height: 100%;
+    width: 240px;
+}
+.logo {
+    margin: 41px 78px 60px 41px;
+}
+.nav-menu li {
+    display: flex;
+    align-items: center;    
+    padding: 0px;
+    list-style: none;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.nav-menu li:hover, .icon:hover {
+    cursor: pointer;
+    fill: #34ABE0;
+    color: #34ABE0;
+    transition: 0.5s;
+}
+.nav-menu li:hover {
+    border-left: 3px solid #34ABE0;
+    transition: 0.2s;
+}
+.active {
+    fill: #34ABE0;
+    color: #34ABE0;
+    border-left: 3px solid #34ABE0;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 42px;
+}
+.header {
+    grid-area: header;
+    width: 100%;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    padding: 40px 60px;
+}
+.header-input {
+    position: relative;
+}
+.icon-input {
+    position: absolute;
+    top: 47px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    fill: grey;
+}
+.input {
+    width: 100%;
+    margin: 31px 0 0 0;
+    border-radius: 50px;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    padding: 12px 44px;
+    font-size: 18px;
+    outline: none;
+}
+.main {
+    grid-area: content;
+}
+.container {
+    margin: 0 auto;
+    padding: 40px 50px 100px 50px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    flex: 347px 0 1;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 1px rgb(168, 165, 165);
+}
+.card:first-child {
+    border: 1px solid #DF212D;
+}
+.card-img {
+    border-radius: 10px;
+}
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px;
+}
+.card-title {
+    font-weight: 700;
+}
+.card-description {
+    color: #626262;
+    font-weight: 600;
+    font-size: 14px;
+}
+.card-sale{
+    color: #DF212D;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+@media screen and (max-width:1100px) {
+    .wrapper {
+        grid-template-areas:
+        'header header'
+        'content content';
+    }
+    .container {
+        margin: 0 auto;
+        padding: 40px 20px 100px 20px;
+    }
+    .card {
+        display: flex;
+        justify-content: space-between;
+        flex: 296px 0 1;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px 1px rgb(168, 165, 165);
+    }
+        .toggle-btn {
+            position: absolute;
+            left: 240px;
+            top: 20px;
+            background-color: #F3F4F9;
+            padding: 10px;
+            cursor: pointer;
+            clip-path: polygon(66% 0, 93% 15%, 100% 49%, 93% 83%, 68% 100%, 32% 100%, 0 100%, 0% 43%, 0 0);
+        }
+    .toggle-btn span {
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        margin: 5px 0;
+    }
+    
+    #sidebar { 
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: -240px;
+        top: 0;
+        background-color: #F3F4F9;
+        height: 100%;
+        width: 240px;
+        transition: 0.5s;
+    }
+    #sidebar.sidebar-active {
+        left: 0px;
+        transition: 0.5s;
+    }
+    .header {
+        grid-area: header;
+        width: 100%;
+        border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+        padding: 40px 30px;
+    }
+    .input {
+        margin: 31px 0 0 0;
+        border-radius: 50px;
+        padding: 12px 40px;
+        font-size: 14px;
+    }
+    h1 {
+        text-align: right;
+    }
+    .icon-input {
+        position: absolute;
+        top: 43px;
+        left: 15px;
+        width: 20px;
+        height: 20px;
+        fill: grey;
+    }
+}
+@media screen and (max-width: 320px) {
+    .card-title {
+        font-size: 12px;
+    }
+    .card-description {
+        font-size: 12px;
+    }
+    .card-sale{
+        font-size: 28px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
