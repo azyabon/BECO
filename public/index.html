@@ -103,25 +103,26 @@
 
     <div class="wrapper">
         <header class="header">
-            <h1 id="title">Развлечения</h1>
-            <div class="header-input">
-                <input class="input" type="text" placeholder="Какой магазин вам нужен?">
-                <svg class="icon-input"><use xlink:href="#loup"></use></svg>
+            <h1 class="header-title" id="title">Развлечения</h1>
+            <div class="header-form">
+                <input class="header-form__input" type="text" placeholder="Какой магазин вам нужен?">
+                <svg class="header-form__icon"><use xlink:href="#loup"></use></svg>
             </div>
         </header>
         <aside id="sidebar">
-            <div class="toggle-btn" onclick="openMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="sidebar-btn" onclick="openMenu()">
+                <span class="sidebar-btn__lines"></span>
             </div>
-            <div class="logo"><img src="./img/logo.png" alt="logo" id="logo-img"></div>
-            <ul class="nav-menu">
-                <li onclick="changeTitle('Каталог', event)"><svg class="icon"><use xlink:href="#menu"></use></svg>Каталог</li>
-                <li onclick="changeTitle('Здоровье', event)"><svg class="icon"><use xlink:href="#health"></use></svg>Здоровье</li>
-                <li onclick="changeTitle('Красота', event)"><svg class="icon"><use xlink:href="#beauty"></use></svg>Красота</li>
-                <li class="active" onclick="changeTitle('Развлечения', event)"><svg class="icon"><use xlink:href="#gaiety"></use></svg>Развлечения</li>
-                <li onclick="changeTitle('Авто', event)"><svg class="icon"><use xlink:href="#car"></use></svg>Авто</li>
+            <div class="sidebar-logo">
+                <img src="./img/logo3.png" alt="logo">
+                <span class="sidebar-logo__title">BECO</span>
+            </div>
+            <ul class="sidebar-menu">
+                <li onclick="changeTitle('Каталог', event)" id="link"><svg class="icon"><use xlink:href="#menu"></use></svg><span class="sidebar-menu__link">Каталог</span></li>
+                <li onclick="changeTitle('Здоровье', event)" id="link"><svg class="icon"><use xlink:href="#health"></use></svg><span class="sidebar-menu__link">Здоровье</span></li>
+                <li onclick="changeTitle('Красота', event)" id="link"><svg class="icon"><use xlink:href="#beauty"></use></svg><span class="sidebar-menu__link">Красота</span></li>
+                <li class="active" onclick="changeTitle('Развлечения', event)" id="link"><svg class="icon"><use xlink:href="#gaiety"></use></svg><span class="sidebar-menu__link">Развлечения</span></li>
+                <li onclick="changeTitle('Авто', event)" id="link"><svg class="icon"><use xlink:href="#car"></use></svg><span class="sidebar-menu__link">Авто</span></li>
             </ul>
         </aside>
         <main class="main">
@@ -135,7 +136,7 @@
                             </div>
                             <div>
                                 <span class="card-sale">50%</span>
-                                <p class="card-description">С К И Д К А</p>
+                                <p class="card-promo">С К И Д К А</p>
                             </div>
                         </div>
                         <img src="./img/image 8.png" alt="card-menu" class="card-img">
